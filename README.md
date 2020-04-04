@@ -1,5 +1,19 @@
 # xyzToolbox
 
+基于 FeHelper 和 electron 做的桌面版封装。
+
+![](docs/Jietu20200405-015432.jpg)
+
+
+拉取项目和子模块
+
+```
+git clone https://xxx.git
+git submodule init
+git submodule update
+```
+
+
 打包命令
 
 ```
@@ -20,3 +34,7 @@ node_modules/.bin/electron-builder -w nsis
 # 在Mac环境下执行
 node_modules/.bin/electron-builder -m dmg
 ```
+
+打包参考链接
+
+> https://qii404.me/2019/07/10/electron.html
