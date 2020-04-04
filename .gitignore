@@ -7,3 +7,4 @@ output/apps/
 output-firefox/
 package-lock.json
 npm-debug.log
+build/

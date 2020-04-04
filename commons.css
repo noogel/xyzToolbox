@@ -4113,7 +4113,8 @@ h3.pui-subname {
     height: 100%;
     left: 0;
     top: 0;
-    z-index: 3
+    z-index: 3;
+    border-right: 1px solid #0b93df;
 }
 
 .pui-menu .inner {
