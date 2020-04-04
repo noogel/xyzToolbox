@@ -1,0 +1,3 @@
+[submodule "FeHelper"]
+	path = FeHelper
+	url = git@github.com:noogel/FeHelper.git
