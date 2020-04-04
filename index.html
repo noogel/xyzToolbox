@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>开发工具箱</title>
+    <link href="commons.css" rel="stylesheet">
+    <script type="text/javascript">
+        function setIframeSize(iframe) {
+            var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+            if (iframeWin.document.body) {
+                iframe.height = (window.innerHeight) + 'px';
+                iframe.width = (window.innerWidth - 200) + 'px';
+                // iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+            }
+        };
+
+        function setIframePage(url) {
+            if (url.startsWith("http")) {
+                document.getElementById("ifm").src = url;
+            } else {
+                document.getElementById("ifm").src = url + '.html';
+            }
+            console.log(document.getElementById("ifm").src);
+        }
+
+        window.onresize = function () {
+            setIframeSize(document.getElementById("ifm"));
+        }
+        window.onload = function () {
+            setIframeSize(document.getElementById("ifm"));
+        }
+
+    </script>
+</head>
+<body>
+<div class="pui-menu">
+    <div class="inner bgc-white" id="innerMenu">
+        <div class="pui-logo">
+            <h1 class="pui-title c-primary ffm ant">开发工具箱</h1>
+        </div>
+        <ul class="component-list ffm fb">
+            <li class="tc">
+                <a class="c-gray5 ant" onclick="setIframePage('FeHelper/apps/code-beautify/index')">代码美化工具</a>
+            </li>
+            <li class="tc">
+                <a class="c-gray5 ant" onclick="setIframePage('FeHelper/apps/json-format/index')">JSON格式化工具</a>
+            </li>
+            <li class="tc">
+                <a class="c-gray5 ant" onclick="setIframePage('FeHelper/apps/en-decode/index')">信息编解码工具</a>
+            </li>
+            <li class="tc">
+                <a class="c-gray5 ant" onclick="setIframePage('FeHelper/apps/timestamp/index')">时间戳转换工具</a>
+            </li>
+            <li class="tc">
+                <a class="c-gray5 ant" onclick="setIframePage('FeHelper/apps/json-diff/index')">JSON比对工具</a>
+            </li>
+            <li class="tc">
+                <a class="c-gray5 ant" onclick="setIframePage('FeHelper/apps/code-compress/index')">代码压缩工具</a>
+            </li>
+            <li class="tc">
+                <a class="c-gray5 ant" onclick="setIframePage('FeHelper/apps/password/index')">随机密码生成器</a>
+            </li>
+            <li class="tc">
+                <a class="c-gray5 ant" onclick="setIframePage('FeHelper/apps/image-base64/index')">图片转Base64</a>
+            </li>
+            <li class="tc">
+                <a class="c-gray5 ant" onclick="setIframePage('FeHelper/apps/qr-code/index')">二维码生成工具</a>
+            </li>
+            <!--            <li class="tc">-->
+            <!--                <a class="c-gray5 ant" onclick="setIframePage('FeHelper/apps/postman/index')">简易版Postman</a>-->
+            <!--            </li>-->
+            <li class="tc">
+                <a class="c-gray5 ant" onclick="setIframePage('FeHelper/apps/regexp/index')">正则表达式工具</a>
+            </li>
+            <li class="tc">
+                <a class="c-gray5 ant" onclick="setIframePage('FeHelper/apps/html2markdown/index')">Markdown工具</a>
+            </li>
+            <li class="tc">
+                <a class="c-gray5 ant" onclick="setIframePage('FeHelper/apps/toolkit/index')">多维小工具集</a>
+            </li>
+            <!--            <li class="tc">-->
+            <!--                <a class="c-gray5 ant" onclick="setIframePage('FeHelper/apps/trans-radix/index')">进制转换工具</a>-->
+            <!--            </li>-->
+            <!--            <li class="tc">-->
+            <!--                <a class="c-gray5 ant" onclick="setIframePage('FeHelper/apps/trans-color/index')">颜色转换工具</a>-->
+            <!--            </li>-->
+            <!--            <li class="tc">-->
+            <!--                <a class="c-gray5 ant" onclick="setIframePage('FeHelper/apps/crontab/index')">Crontab生成器</a>-->
+            <!--            </li>-->
+            <!--            <li class="tc">-->
+            <!--                <a class="c-gray5 ant" onclick="setIframePage('FeHelper/apps/loan-rate/index')">贷款利率计算器</a>-->
+            <!--            </li>-->
+        </ul>
+    </div>
+</div>
+<div class="pui-body">
+    <iframe id="ifm" src="" name="test" frameborder="0" style="display: block; padding: 0; margin: 0"
+            scrolling="auto"></iframe>
+</div>
+</body>
+</html>
