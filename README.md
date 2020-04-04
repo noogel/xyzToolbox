@@ -4,6 +4,10 @@
 
 ![](docs/Jietu20200405-015432.jpg)
 
+Mac 安装包下载地址：
+
+链接:https://pan.baidu.com/s/1SYjVX2Dhz6TTbaif1Bk8RA  密码:64oo
+
 
 拉取项目和子模块
 
